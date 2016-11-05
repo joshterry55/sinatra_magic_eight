@@ -33,6 +33,11 @@ post '/' do
   erb :index
 end
 
+post '/test' do
+  @question2 = params[:question2]
+  erb :test
+end
+
 post '/add' do
   @addanswer = params[:addanswer]
   $updated_answers << @addanswer
@@ -51,4 +56,12 @@ end
 
 get '/reset' do
   erb :reset
+end
+
+get '/see' do
+  erb :see
+end
+
+get '/test' do
+  erb :test
 end

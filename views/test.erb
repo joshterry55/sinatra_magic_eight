@@ -1,0 +1,18 @@
+
+<div class="leftfloat">
+  <div class="centering">
+    <img id="testball" src="/images/magic_eight.png">
+    <% if @question2 %>
+    <h5 id="toptext"><%= $updated_answers.sample %></h5>
+    <% end %>
+  </div>
+</div>
+<div id="asking-question-test">
+    <!-- <p>Ask question here: </p> -->
+  <div class="centering">
+    <form action="/test" method="POST">
+      <input type="text" name="question2" placeholder="Ask question here" size="40"><br><br>
+      <input type="submit" value="Ask Question">
+    </form>
+  </div>
+</div>

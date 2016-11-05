@@ -1,0 +1,10 @@
+
+
+<h3>Click to reset</h3>
+<form method="POST" action="/reset">
+  <input type="submit" name="clear" value="reset">
+</form>
+
+<% if @clear %>
+  <p>Answer have been reset</p>
+<% end %>

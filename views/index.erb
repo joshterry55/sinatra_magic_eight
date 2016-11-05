@@ -1,0 +1,41 @@
+
+<div class="magicball">
+  <div id="asking-question">
+    <p>Ask question here: </p>
+    <form action="/" method="POST">
+      <input type="text" name="question" placeholder="Ask question here" size="40"><br><br>
+      <input type="submit" value="Ask Question">
+    </form>
+  </div>
+  <div class="answers">
+    <!-- <% $answers = [
+      "It is certain",
+      "Without a doubt",
+      "It is decidedly so",
+      "Yes, definitely",
+      "You may rely on it",
+      "As I see it, yes",
+      "Most likely",
+      "Outlook good",
+      "Yes",
+      "Signs point to yes",
+      "Reply hazy try again",
+      "Ask again later",
+      "Better not tell you now",
+      "Cannot predict now",
+      "Concentrate and ask again",
+      "Don't count on it",
+      "My reply is no",
+      "My sources say no",
+      "Outlook not so good",
+      "Very doubtful"
+      ]%> -->
+
+    <% if @question %>
+      <p class="answers">You asked: </p>
+      <p class="response"><%= @question %></p>
+      <p class="answers">The Answer is:</p>
+      <p class='response'><%= $updated_answers.sample %></p>
+    <% end %>
+  </div>
+</div>
